@@ -13,6 +13,15 @@ connected=0; //connected to network
 name=noone;
 title=noone;
 
+working=1;
+printing=0;
+delivering=0;
+complete_work=0;
+complete_work_max=10;
+invoice=0;
+invoice_max=5;
+workcount=0;
+
 //title
 
 
@@ -50,3 +59,6 @@ body=irandom(sprite_get_number(spr_body_female));
 hair=irandom(sprite_get_number(spr_user_hair_female))
 
 }
+
+//start ai
+alarm[0]=20

@@ -64,6 +64,9 @@
         <script>scripts\scr_title.gml</script>
       </scripts>
       <script>scripts\scr_female_name.gml</script>
+      <script>scripts\workwork.gml</script>
+      <script>scripts\scr_printing.gml</script>
+      <script>scripts\scr_working.gml</script>
       <script>scripts\scr_init_user.gml</script>
     </scripts>
     <script>scripts\scr_normalize_sprite.gml</script>
@@ -88,6 +91,7 @@
       <object>objects\obj_user_basic</object>
     </objects>
     <objects name="props">
+      <object>objects\obj_fax</object>
       <object>objects\obj_server</object>
       <object>objects\obj_generator</object>
       <object>objects\obj_chair_front</object>

@@ -40,6 +40,33 @@ scr_init_user();
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+
+
+alarm[0]=60
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -69,6 +96,11 @@ if happiness &gt;= 50 {
  if STORAGE_USED &lt; STORAGE_AVAILABLE {STORAGE_USED+=SERVER_USE_MOD;}
 
 }
+
+//working
+
+if workcount &gt;=100 {complete_work+=1; workcount=0;}
+
 </string>
           </argument>
         </arguments>
