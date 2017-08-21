@@ -15,3 +15,9 @@ draw_text(0,160,"Total Users: "+string(USERS))
 draw_text(0,195,"Power")
 draw_text(0,230,"Generators: "+string(GENERATORS))
 draw_text(0,250,string(USEDPOWER)+"/"+string(MAXPOWER));
+
+draw_text(0,280,"STORAGE")
+draw_text(0,300,string(floor(STORAGE_USED))+"/"+string(floor(STORAGE_AVAILABLE/1000))+"tb")
+
+draw_text(0,330,"Budget")
+draw_text(0,360,"$"+string(BUDGET))

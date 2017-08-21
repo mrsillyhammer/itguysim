@@ -32,12 +32,19 @@ SHOWPRINTERS=0;
 globalvar COMPANY; //company name
 COMPANY="BUTT's N STUFF";
 globalvar PLAYER; //playername
+PLAYER="Holden McRotch";
+globalvar PLAYER_MONEY;
+PLAYER_MONEY=25000;
+
+
+
 
 //gameplay
 
 //budget
 globalvar BUDGET;// money
 BUDGET=10000;
+
 
 //power
 globalvar GENERATORS; //number of generators
@@ -78,11 +85,15 @@ WIRELESS=0;
 
 //servers
 globalvar SERVERS; //number of servers
+globalvar STORAGE_PER_SERVER;
+STORAGE_PER_SERVER=2000;
 SERVERS=0;
 globalvar STORAGE_AVAILABLE; //available storage
 STORAGE_AVAILABLE=0;
 globalvar STORAGE_USED; // used storage
 STORAGE_USED=0;
+globalvar SERVER_USE_MOD; // storage user by happy users
+SERVER_USE_MOD=.000001;
 
 //wireless
 globalvar WIRELESS_BASE; //wireless base range

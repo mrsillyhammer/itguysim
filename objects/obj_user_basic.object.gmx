@@ -62,6 +62,11 @@ scr_init_user();
 //update printer
 if instance_exists(obj_printer_parent) {
 myprinter=instance_nearest(x,y,obj_printer_parent);
+}
+
+if happiness &gt;= 50 {
+
+ if STORAGE_USED &lt; STORAGE_AVAILABLE {STORAGE_USED+=SERVER_USE_MOD;}
 
 }
 </string>

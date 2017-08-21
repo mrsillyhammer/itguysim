@@ -1,0 +1,10 @@
+///scr_draw_outline(color,alpha)
+
+draw_sprite_ext(sprite_index,image_index,x-1,y,image_xscale,image_yscale,0,argument0,argument1)
+draw_sprite_ext(sprite_index,image_index,x+1,y,image_xscale,image_yscale,0,argument0,argument1)
+draw_sprite_ext(sprite_index,image_index,x,y-1,image_xscale,image_yscale,0,argument0,argument1)
+draw_sprite_ext(sprite_index,image_index,x,y+1,image_xscale,image_yscale,0,argument0,argument1)
+draw_sprite_ext(sprite_index,image_index,x-1,y-1,image_xscale,image_yscale,0,argument0,argument1)
+draw_sprite_ext(sprite_index,image_index,x+1,y+1,image_xscale,image_yscale,0,argument0,argument1)
+draw_sprite_ext(sprite_index,image_index,x-1,y+1,image_xscale,image_yscale,0,argument0,argument1)
+draw_sprite_ext(sprite_index,image_index,x+1,y-1,image_xscale,image_yscale,0,argument0,argument1)
