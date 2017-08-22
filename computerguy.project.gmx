@@ -48,17 +48,27 @@
         <sprite>sprites\spr_desk_front</sprite>
       </sprites>
     </sprites>
+    <sprites name="gui">
+      <sprite>sprites\spr_refill_paper</sprite>
+      <sprite>sprites\spr_close</sprite>
+      <sprite>sprites\spr_refill_ink</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_floor</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_message.gml</script>
     <script>scripts\scr_draw_outline.gml</script>
     <scripts name="users">
       <scripts name="drawing">
         <script>scripts\scr_draw_user.gml</script>
       </scripts>
+      <script>scripts\scr_it_budget.gml</script>
+      <script>scripts\scr_power_bill.gml</script>
+      <script>scripts\scr_age_equipment.gml</script>
+      <script>scripts\scr_pay_salary.gml</script>
       <script>scripts\scr_male_name.gml</script>
       <scripts name="titles">
         <script>scripts\scr_title.gml</script>
@@ -66,15 +76,19 @@
       <script>scripts\scr_female_name.gml</script>
       <script>scripts\workwork.gml</script>
       <script>scripts\scr_printing.gml</script>
+      <script>scripts\scr_delivering.gml</script>
       <script>scripts\scr_working.gml</script>
+      <script>scripts\scr_workvalue.gml</script>
       <script>scripts\scr_init_user.gml</script>
     </scripts>
     <script>scripts\scr_normalize_sprite.gml</script>
     <scripts name="equipment">
+      <script>scripts\scr_pc_init.gml</script>
       <script>scripts\scr_printer_init.gml</script>
     </scripts>
     <scripts name="game">
       <script>scripts\scr_gui.gml</script>
+      <script>scripts\string_add_zeros.gml</script>
       <script>scripts\scr_init_game_variables.gml</script>
     </scripts>
   </scripts>
@@ -110,10 +124,17 @@
       <object>objects\obj_control</object>
     </objects>
     <objects name="parents">
-      <object>objects\obj_printer_parent</object>
+      <objects name="printer">
+        <object>objects\obj_printer_parent</object>
+        <object>objects\obj_printer_paper_refill</object>
+        <object>objects\obj_printer_ink_refill</object>
+        <object>objects\obj_printer_close</object>
+        <object>objects\obj_printer_display</object>
+      </objects>
       <object>objects\obj_portal</object>
       <object>objects\obj_desk_parent</object>
       <object>objects\obj_wall</object>
+      <object>objects\obj_counter</object>
     </objects>
   </objects>
   <rooms name="rooms">

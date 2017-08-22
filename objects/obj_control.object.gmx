@@ -224,6 +224,41 @@ WIRELESS=instance_number(obj_wireless_basic);
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>//game button control
+
+if SHOWWIFI &gt;=2 {SHOWWIFI=0}
+if SHOWPATHS &gt;=2 {SHOWPATHS=0}
+if SHOWNAMES &gt;=2 {SHOWNAMES=0}
+if SHOWPC &gt;=2 {SHOWPC=0}
+if SHOWPCLINES &gt;=2 {SHOWPCLINES=0}
+if SHOWPRINTERS &gt;=2 {SHOWPRINTERS=0}
+
+if keyboard_check_released(ord("O")) {SHOWWIFI+=1}
+if keyboard_check_released(ord("P")) {SHOWPRINTERS+=1}
+if keyboard_check_released(ord("N")) {SHOWNAMES+=1}
+if keyboard_check_released(ord("C")) {SHOWPCLINES+=1}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///power
 var pcu=POWERUSED_PC*COMPUTERS;
 var pru=(POWERUSED_PRINTER_SMALL*PRINTERS_SMALL)+(POWERUSED_PRINTER_LARGE*PRINTERS_LARGE);
@@ -279,6 +314,75 @@ USERS=instance_number(obj_user_basic);
             <kind>1</kind>
             <string>///storage
 STORAGE_AVAILABLE=SERVERS*STORAGE_PER_SERVER;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///time
+SECOND+=SPEED
+if SECOND &gt;=60 {MINUTE+=1 SECOND=1}
+if MINUTE &gt;=60 {scr_pay_salary() HOUR+=1 MINUTE=1}
+if HOUR &gt;=17 {DAY+=1 scr_it_budget() scr_age_equipment(); scr_power_bill() HOUR=8}
+if DAY &gt;=30 {MONTH+=1 DAY=1}
+if MONTH &gt;=12 {YEAR+=1 MONTH=1}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </string>
           </argument>
         </arguments>

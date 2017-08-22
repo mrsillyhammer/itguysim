@@ -5,6 +5,16 @@ sex=irandom(1) // male or female (0,1)
 age=irandom(60)+20;
 intelligence=irandom(80)+20;
 level=choose(0,1,2);
+if level=0 {
+salary=choose(14,15,16,17)
+}
+if level=1 {
+salary=choose(20,22,24,26)
+}
+
+if level=2 {
+salary=choose(40,45,40)
+}
 happiness=100;
 mood=100;
 
@@ -13,14 +23,18 @@ connected=0; //connected to network
 name=noone;
 title=noone;
 
+sales=0;
+workrate=choose(.15,.25,.3,.5,.7,1)
 working=1;
 printing=0;
 delivering=0;
 complete_work=0;
-complete_work_max=10;
+complete_work_max=5;
 invoice=0;
 invoice_max=5;
 workcount=0;
+workvalue=noone;
+scr_workvalue();
 
 //title
 

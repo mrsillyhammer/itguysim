@@ -17,10 +17,14 @@ mode=1;
 texture_set_interpolation(false);
 //gui stuff
 
+globalvar mouseover;
+mouseover=0;
 globalvar SHOWWIFI;
 SHOWWIFI=0;
 globalvar SHOWPATHS;
+SHOWPATHS=0;
 globalvar SHOWNAMES;
+SHOWNAMES=0;
 globalvar SHOWPC;
 SHOWPC=0;
 globalvar SHOWPCLINES;
@@ -43,7 +47,9 @@ PLAYER_MONEY=25000;
 
 //budget
 globalvar BUDGET;// money
-BUDGET=10000;
+BUDGET=2000;
+globalvar COMPANY_MONEY;
+COMPANY_MONEY=10000;
 
 
 //power
@@ -93,10 +99,51 @@ STORAGE_AVAILABLE=0;
 globalvar STORAGE_USED; // used storage
 STORAGE_USED=0;
 globalvar SERVER_USE_MOD; // storage user by happy users
-SERVER_USE_MOD=.000001;
+SERVER_USE_MOD=.00001;
 
 //wireless
 globalvar WIRELESS_BASE; //wireless base range
 WIRELESS_BASE=300;
+
+//COSTS
+
+globalvar INK_COST;
+INK_COST=2000;
+globalvar PAPER_COST;
+PAPER_COST=1000;
+globalvar PC_COST_LOW;
+PC_COST_LOW=2500;
+globalvar PC_COST_MED;
+PC_COST_MED=5000;
+globalvar PC_COST_HIGH;
+PC_COST_HIGH=8000;
+globalvar WIRELESS_COST;
+WIRELESS_COST=10000;
+globalvar PRINTER_LARGE_COST;
+PRINTER_LARGE_COST=8000;
+globalvar PRINTER_SMALL_COST;
+PRINTER_SMALL_COST=1000;
+globalvar FAX_COST;
+FAX_COST=5000;
+
+
+//time
+
+globalvar SPEED;
+SPEED=5;
+
+globalvar HOUR;
+HOUR=8;
+globalvar MINUTE;
+MINUTE=0;
+globalvar SECOND;
+SECOND=1
+globalvar DAY;
+DAY=1;
+globalvar MONTH;
+MONTH=1;
+globalvar YEAR;
+YEAR=0;
+
 
 

@@ -3,13 +3,13 @@
 if working=1 {
    if instance_exists(mypc) {
 
-      if distance_to_object(mypc) <= 30 {
+      if distance_to_object(mypc) <= 3000 {
   
   
       if complete_work < complete_work_max
        {
      
-        workcount+=.01;
+        workcount+=workrate;
      
         }
         

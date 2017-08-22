@@ -19,5 +19,12 @@ draw_text(0,250,string(USEDPOWER)+"/"+string(MAXPOWER));
 draw_text(0,280,"STORAGE")
 draw_text(0,300,string(floor(STORAGE_USED))+"/"+string(floor(STORAGE_AVAILABLE/1000))+"tb")
 
-draw_text(0,330,"Budget")
+draw_text(0,330,"IT Budget")
 draw_text(0,360,"$"+string(BUDGET))
+
+draw_text(0,390,"Company Budget")
+draw_text(0,420,"$"+string(COMPANY_MONEY))
+
+//clock
+
+draw_text(view_wport-100,10,string(string_add_zeros(HOUR,2))+":"+string(string_add_zeros(MINUTE,2))+":"+string(string_add_zeros(SECOND,2)))

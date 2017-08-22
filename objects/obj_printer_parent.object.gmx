@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_printer_init();
+            <string>display=1
+scr_printer_init();
 
 </string>
           </argument>
@@ -51,6 +52,12 @@
             <kind>1</kind>
             <string>if display=2 {display=0;}
 if display=1 {depth=-999999} else {depth=-y}
+
+if c_ink &gt;=1 &amp;&amp; m_ink &gt;=1 &amp;&amp; b_ink &gt;=1 &amp;&amp; y_ink &gt;=1 {
+has_ink=1;
+} else {has_ink=0;}
+
+
 </string>
           </argument>
         </arguments>
@@ -73,7 +80,9 @@ if display=1 {depth=-999999} else {depth=-y}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>display=0;
+            <string>if mouseover=0 {
+display=0;
+}
 </string>
           </argument>
         </arguments>
@@ -96,8 +105,7 @@ if display=1 {depth=-999999} else {depth=-y}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>display=0;
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -119,7 +127,11 @@ if display=1 {depth=-999999} else {depth=-y}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>display+=1;
+            <string>
+display=1;
+mydisp=instance_create(x+90,y-21,obj_printer_display);
+mydisp.master=id;
+
 </string>
           </argument>
         </arguments>

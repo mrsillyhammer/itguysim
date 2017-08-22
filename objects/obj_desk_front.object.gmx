@@ -27,9 +27,7 @@
             <kind>1</kind>
             <string>sprite_index=spr_desk_front;
 scr_normalize_sprite();
-//create a user for this desk/computer
-myuser=instance_create(obj_portal.x,obj_portal.y,obj_user_basic);
-myuser.mypc=id;
+scr_pc_init();
 </string>
           </argument>
         </arguments>
