@@ -75,7 +75,9 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>master.display=0
+            <string>if instance_exists(master) {
+master.display=0
+}
 </string>
           </argument>
         </arguments>

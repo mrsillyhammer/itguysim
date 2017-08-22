@@ -4,7 +4,28 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="bg">
+      <sound>sound\bg_music_main</sound>
+    </sounds>
+    <sounds name="sfx">
+      <sounds name="equipment">
+        <sounds name="printer">
+          <sound>sound\snd_printer_outof_paper</sound>
+          <sound>sound\snd_printer_outof_ink</sound>
+          <sound>sound\snd_printer_refill_paper</sound>
+          <sound>sound\snd_printer_refill_ink</sound>
+          <sound>sound\snd_printer_click</sound>
+        </sounds>
+        <sounds name="pc">
+          <sound>sound\snd_pc_click</sound>
+          <sound>sound\snd_pc_speedup</sound>
+          <sound>sound\snd_pc_slowdown</sound>
+        </sounds>
+        <sound>sound\snd_sell</sound>
+      </sounds>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="misc">
       <sprite>sprites\spr_misc_grey</sprite>
@@ -49,6 +70,7 @@
       </sprites>
     </sprites>
     <sprites name="gui">
+      <sprite>sprites\spr_data</sprite>
       <sprite>sprites\spr_refill_paper</sprite>
       <sprite>sprites\spr_pc_up</sprite>
       <sprite>sprites\spr_pc_down</sprite>
@@ -56,6 +78,7 @@
       <sprite>sprites\spr_close</sprite>
       <sprite>sprites\spr_refill_ink</sprite>
     </sprites>
+    <sprite>sprites\spr_user_mask</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_floor</background>
@@ -70,6 +93,10 @@
       <scripts name="titles">
         <script>scripts\scr_title.gml</script>
       </scripts>
+      <script>scripts\scr_gogo.gml</script>
+      <script>scripts\scr_goto_printer.gml</script>
+      <script>scripts\scr_goto_pc.gml</script>
+      <script>scripts\scr_goto_fax.gml</script>
       <script>scripts\scr_female_name.gml</script>
       <script>scripts\workwork.gml</script>
       <script>scripts\scr_printing.gml</script>
@@ -79,6 +106,7 @@
       <script>scripts\scr_init_user.gml</script>
     </scripts>
     <scripts name="equipment">
+      <script>scripts\scr_pc_break.gml</script>
       <script>scripts\scr_pc_init.gml</script>
       <script>scripts\scr_refill_paper.gml</script>
       <script>scripts\scr_refill_ink.gml</script>
@@ -93,6 +121,10 @@
         <script>scripts\scr_it_budget.gml</script>
         <script>scripts\get_powerbill.gml</script>
       </scripts>
+      <script>scripts\draw_storage_circular.gml</script>
+      <script>scripts\draw_text_outline.gml</script>
+      <script>scripts\draw_text_gui.gml</script>
+      <script>scripts\draw_text_dropshadow_ext_transformed.gml</script>
       <script>scripts\scr_message.gml</script>
       <script>scripts\scr_draw_outline.gml</script>
       <script>scripts\scr_normalize_sprite.gml</script>
@@ -105,6 +137,7 @@
   <fonts name="fonts">
     <fonts name="gui">
       <font>fonts\fn_gui_16</font>
+      <font>fonts\fn_gui_20</font>
       <font>fonts\fn_gui_32</font>
       <font>fonts\fn_gui_64</font>
       <font>fonts\fn_equipment_small</font>
@@ -112,6 +145,7 @@
   </fonts>
   <objects name="objects">
     <objects name="npcs">
+      <object>objects\obj_user_detail</object>
       <object>objects\obj_user_basic</object>
     </objects>
     <objects name="props">

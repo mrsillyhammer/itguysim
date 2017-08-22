@@ -126,6 +126,7 @@ instance_destroy();
 BUDGET -= PC_UPGRADE_COST
 with (master) {
 master.quality+=.1
+audio_play_sound(snd_pc_speedup,2,0)
 }
 }
 </string>

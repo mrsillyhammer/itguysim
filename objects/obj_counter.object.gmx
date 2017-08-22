@@ -101,7 +101,7 @@ if life &lt;=0 {instance_destroy();}
             <string>draw_set_font(fn_gui_32)
 var cc=draw_get_color()
 draw_set_color(color)
-draw_text(x,y,message);
+draw_text_outline(x,y,message,color,c_black);
 draw_set_color(cc);
 draw_set_font(fn_gui_16)
 </string>

@@ -130,6 +130,7 @@ master.c_ink=100;
 master.m_ink=100;
 master.b_ink=100;
 master.y_ink=100;
+audio_play_sound(snd_printer_refill_ink,5,0)
 }
 }
 </string>

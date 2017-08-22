@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_solid</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -142,7 +142,7 @@ display=0;
 display=1;
 mydisp=instance_create(x+90,y-21,obj_printer_display);
 mydisp.master=id;
-
+audio_play_sound(snd_printer_click,1,0);
 </string>
           </argument>
         </arguments>

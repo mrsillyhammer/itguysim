@@ -128,7 +128,7 @@ with (master) {
 PAPER_SPENT+=PAPER_COST
 BUDGET -= PAPER_COST
 master.paper=300
-
+audio_play_sound(snd_printer_refill_paper,5,0)
 }
 }
 </string>

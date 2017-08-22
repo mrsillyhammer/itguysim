@@ -2,7 +2,9 @@
 
 sex=irandom(1) // male or female (0,1)
 scale=.35
+myspd=choose(2,2.2,2.4,2.5);
 age=irandom(60)+20;
+mydata=0;
 intelligence=irandom(80)+20;
 level=choose(0,1,2);
 if level=0 {
@@ -20,7 +22,8 @@ mood=100;
 
 connected=0; //connected to network
 
-name=noone;
+first_name=noone;
+last_name=noone;
 title=noone;
 
 sales=0;
@@ -34,6 +37,8 @@ invoice=0;
 invoice_max=5;
 workcount=0;
 workvalue=noone;
+pages_printed=0;
+sale_amt=0;
 scr_workvalue();
 
 //title

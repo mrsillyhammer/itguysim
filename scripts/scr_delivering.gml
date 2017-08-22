@@ -6,15 +6,16 @@ working=0;
 printing=0;
    if instance_exists(myfax) {
 
-      if distance_to_object(myfax) <= 30000 {
+      if distance_to_object(myfax) <= 30 {
   
   
         if invoice >=1 {
         
           invoice-=1
-          sales+=workvalue;
-          scr_message("+$"+string(workvalue),c_lime);
-          COMPANY_MONEY+=workvalue
+          sales+=1;
+          sale_amt+=workvalue+mydata;
+          scr_message("+$"+string(workvalue+mydata),c_lime);
+          COMPANY_MONEY+=workvalue+mydata
         
         }
         
@@ -26,6 +27,11 @@ printing=0;
         
        
   
+     }
+     
+     if distance_to_object(myfax) > 30 {
+     scr_goto_fax();
+     
      }
 
    }

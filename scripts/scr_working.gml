@@ -3,14 +3,18 @@
 if working=1 {
    if instance_exists(mypc) {
 
-      if distance_to_object(mypc) <= 3000 && mypc.connected=1 && mypc.status >0 {
+      if distance_to_object(mypc) <= 30 && mypc.connected=1 && mypc.status ==0 && STORAGE_USED < STORAGE_AVAILABLE {
   
   
       if complete_work < complete_work_max
        {
-     
+      STORAGE_USED+=SERVER_USE_MOD
+      mydata+=SERVER_USE_MOD
         workcount+=workrate+mypc.quality;
-     
+        var breakchance=irandom(100);
+        if breakchance >=99 {
+        mypc.life-=(.5-mypc.quality)
+        }
         }
         
         if complete_work >=complete_work_max {
@@ -20,6 +24,10 @@ if working=1 {
         
         }
   
+     }
+     
+     if distance_to_object(mypc) > 30 {
+     scr_goto_pc();
      }
 
    }

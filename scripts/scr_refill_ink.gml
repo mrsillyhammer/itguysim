@@ -4,3 +4,4 @@
   m_ink=100;
   b_ink=100;
   y_ink=100;
+    audio_play_sound(snd_printer_refill_ink,3,0);

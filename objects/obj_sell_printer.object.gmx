@@ -125,6 +125,7 @@ instance_destroy();
             <string>
 BUDGET += PRINTER_LARGE_COST
 with (master) {
+audio_play_sound(snd_sell,2,0)
 master.quality=-100
 }
 
