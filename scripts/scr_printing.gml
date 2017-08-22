@@ -22,6 +22,7 @@ working=0;
         myprinter.m_ink-=m;
         myprinter.b_ink-=b;
         myprinter.y_ink-=py;
+        myprinter.life-=(myprinter.healthmod+(myprinter.age*.025))
         complete_work-=1;
         invoice+=1;
      

@@ -11,3 +11,4 @@ m_ink=100;
 b_ink=100;
 y_ink=100;
 mydisp=noone;
+healthmod=.000001
