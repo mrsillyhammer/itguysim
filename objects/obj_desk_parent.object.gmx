@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_solid</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>connected=0;
+            <string>display=1;
 myconnection=noone;
 </string>
           </argument>
@@ -49,12 +49,95 @@ myconnection=noone;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_wireless_basic) {
+            <string>if display=2 {display=0;}
+if display=1 {depth=-999999} else {depth=-y}
+
+//connection
+if instance_exists(obj_wireless_basic) {
 
   if distance_to_object(obj_wireless_basic) &lt; WIRELESS_BASE {
-  myconnection=instance_nearest(x,y,obj_wireless_basic)}
-
+  myconnection=instance_nearest(x,y,obj_wireless_basic)
+   connected=1;
+   } else {connected=0;}
+ 
 }
+
+if quality=-100 {instance_destroy();}
+powerusage=(quality*100)+POWERUSED_PC
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if mouseover=0 {
+display=0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="53">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+display=1;
+mydisp=instance_create(x+150,y-21,obj_pc_display);
+mydisp.master=id;
+
 </string>
           </argument>
         </arguments>
@@ -90,7 +173,23 @@ draw_set_color(cc);
 }
 
 
-draw_self()
+if display=1 {
+draw_set_color(c_white);
+draw_rectangle(x+90,y-20,x+150,y+50,0)
+draw_set_color(c_black);
+draw_set_font(fn_equipment_small);
+draw_text(x+95,y-20,"HEALTH")
+draw_healthbar(x+95,y-8,x+135,y-7,life,c_black,c_lime,c_lime,0,1,1)
+
+draw_text(x+91,y-5,"AGE:"+string(floor(age)))
+draw_text(x+91,y+3,"Con:"+string(connected))
+draw_text(x+91,y+10,"QUAL:"+string(quality))
+}
+
+draw_set_color(c_white);
+if display=1 {scr_draw_outline(c_red,.8)}
+draw_self();
+
 </string>
           </argument>
         </arguments>

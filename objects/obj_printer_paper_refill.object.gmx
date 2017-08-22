@@ -125,7 +125,7 @@ instance_destroy();
             <string>if BUDGET &gt;= PAPER_COST  {
 
 with (master) {
-
+PAPER_SPENT+=PAPER_COST
 BUDGET -= PAPER_COST
 master.paper=300
 

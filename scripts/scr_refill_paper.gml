@@ -1,0 +1,3 @@
+  paper=300;
+  BUDGET -= PAPER_COST;
+  PAPER_SPENT+=PAPER_COST;

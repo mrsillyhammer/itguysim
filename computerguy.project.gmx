@@ -50,6 +50,9 @@
     </sprites>
     <sprites name="gui">
       <sprite>sprites\spr_refill_paper</sprite>
+      <sprite>sprites\spr_pc_up</sprite>
+      <sprite>sprites\spr_pc_down</sprite>
+      <sprite>sprites\spr_sell_equipment</sprite>
       <sprite>sprites\spr_close</sprite>
       <sprite>sprites\spr_refill_ink</sprite>
     </sprites>
@@ -59,16 +62,10 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_message.gml</script>
-    <script>scripts\scr_draw_outline.gml</script>
     <scripts name="users">
       <scripts name="drawing">
         <script>scripts\scr_draw_user.gml</script>
       </scripts>
-      <script>scripts\scr_it_budget.gml</script>
-      <script>scripts\scr_power_bill.gml</script>
-      <script>scripts\scr_age_equipment.gml</script>
-      <script>scripts\scr_pay_salary.gml</script>
       <script>scripts\scr_male_name.gml</script>
       <scripts name="titles">
         <script>scripts\scr_title.gml</script>
@@ -81,12 +78,25 @@
       <script>scripts\scr_workvalue.gml</script>
       <script>scripts\scr_init_user.gml</script>
     </scripts>
-    <script>scripts\scr_normalize_sprite.gml</script>
     <scripts name="equipment">
       <script>scripts\scr_pc_init.gml</script>
+      <script>scripts\scr_refill_paper.gml</script>
+      <script>scripts\scr_refill_ink.gml</script>
       <script>scripts\scr_printer_init.gml</script>
     </scripts>
     <scripts name="game">
+      <scripts name="budgeting">
+        <script>scripts\scr_calculate_powerbill.gml</script>
+        <script>scripts\scr_pay_salary.gml</script>
+        <script>scripts\scr_power_bill.gml</script>
+        <script>scripts\scr_age_equipment.gml</script>
+        <script>scripts\scr_it_budget.gml</script>
+        <script>scripts\get_powerbill.gml</script>
+      </scripts>
+      <script>scripts\scr_message.gml</script>
+      <script>scripts\scr_draw_outline.gml</script>
+      <script>scripts\scr_normalize_sprite.gml</script>
+      <script>scripts\scr_equipment_install.gml</script>
       <script>scripts\scr_gui.gml</script>
       <script>scripts\string_add_zeros.gml</script>
       <script>scripts\scr_init_game_variables.gml</script>
@@ -127,14 +137,24 @@
       <objects name="printer">
         <object>objects\obj_printer_parent</object>
         <object>objects\obj_printer_paper_refill</object>
+        <object>objects\obj_sell_printer</object>
         <object>objects\obj_printer_ink_refill</object>
         <object>objects\obj_printer_close</object>
         <object>objects\obj_printer_display</object>
       </objects>
+      <objects name="pc">
+        <object>objects\obj_pc_close</object>
+        <object>objects\obj_pc_speed_up</object>
+        <object>objects\obj_sell_pc</object>
+        <object>objects\obj_pc_slow_down</object>
+        <object>objects\obj_pc_display</object>
+      </objects>
       <object>objects\obj_portal</object>
+      <object>objects\obj_chair_parent</object>
       <object>objects\obj_desk_parent</object>
       <object>objects\obj_wall</object>
       <object>objects\obj_counter</object>
+      <object>objects\obj_solid</object>
     </objects>
   </objects>
   <rooms name="rooms">

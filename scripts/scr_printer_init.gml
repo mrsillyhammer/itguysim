@@ -12,3 +12,4 @@ b_ink=100;
 y_ink=100;
 mydisp=noone;
 healthmod=.000001
+quality=1;

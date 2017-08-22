@@ -1,7 +1,7 @@
 ///scr_init_user
 
 sex=irandom(1) // male or female (0,1)
-
+scale=.35
 age=irandom(60)+20;
 intelligence=irandom(80)+20;
 level=choose(0,1,2);
@@ -52,7 +52,7 @@ body_sprite=noone;
 hair=noone;
 body=noone;
 head=irandom(sprite_get_number(spr_user_head));
-body_type=choose(-.75,.75,0,-.5,.5,-.25,.25);
+body_type=0;
 
 if sex=0 {
 face_sprite=spr_user_face_male;

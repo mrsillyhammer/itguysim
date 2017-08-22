@@ -17,6 +17,12 @@ mode=1;
 texture_set_interpolation(false);
 //gui stuff
 
+//pause
+globalvar GO;
+GO=1;
+
+//overlays
+
 globalvar mouseover;
 mouseover=0;
 globalvar SHOWWIFI;
@@ -39,7 +45,8 @@ globalvar PLAYER; //playername
 PLAYER="Holden McRotch";
 globalvar PLAYER_MONEY;
 PLAYER_MONEY=25000;
-
+globalvar AUTOPILOT;
+AUTOPILOT=1;
 
 
 
@@ -50,9 +57,19 @@ globalvar BUDGET;// money
 BUDGET=2000;
 globalvar COMPANY_MONEY;
 COMPANY_MONEY=10000;
+globalvar INK_SPENT;
+INK_SPENT=0;
+globalvar PAPER_SPENT;
+PAPER_SPENT=0;
+globalvar SALARY_SPENT;
+SALARY_SPENT=0;
+globalvar POWER_SPENT;
+POWER_SPENT=0;
 
 
 //power
+globalvar POWERBILL;
+POWERBILL=0;
 globalvar GENERATORS; //number of generators
 GENERATORS=0;
 globalvar MAXPOWER; // building max power
@@ -106,7 +123,8 @@ globalvar WIRELESS_BASE; //wireless base range
 WIRELESS_BASE=300;
 
 //COSTS
-
+globalvar PC_UPGRADE_COST;
+PC_UPGRADE_COST=150;
 globalvar INK_COST;
 INK_COST=1000;
 globalvar PAPER_COST;

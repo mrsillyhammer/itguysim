@@ -11,20 +11,20 @@ working=0;
       if complete_work >= 1 && myprinter.paper >=1 && myprinter.has_ink=1 && invoice < invoice_max
        {
        var c,m,b,py;
-       c=random(1);
-       m=random(1);
-       b=random(1);
-       py=random(1);
+       c=random(.5);
+       m=random(.5);
+       b=random(.5);
+       py=random(.5);
        
-        myprinter.paper-=1;
+        myprinter.paper-=myprinter.quality;
         myprinter.pages_lifetime+=1;
         myprinter.c_ink-=c;
         myprinter.m_ink-=m;
         myprinter.b_ink-=b;
         myprinter.y_ink-=py;
         myprinter.life-=(myprinter.healthmod+(myprinter.age*.025))
-        complete_work-=1;
-        invoice+=1;
+        complete_work-=myprinter.quality;
+        invoice+=myprinter.quality;
      
         }
         

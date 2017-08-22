@@ -85,7 +85,8 @@ alarm[0]=60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth=-y;
+            <string>
+depth=-y;
 
 //update printer
 if instance_exists(obj_printer_parent) {
@@ -96,7 +97,7 @@ myprinter=instance_nearest(x,y,obj_printer_parent);
 if instance_exists(obj_fax) {
 myfax=instance_nearest(x,y,obj_fax);
 }
-
+if GO=1 {
 if happiness &gt;= 50 {
 
  if STORAGE_USED &lt; STORAGE_AVAILABLE {STORAGE_USED+=SERVER_USE_MOD;}
@@ -121,7 +122,7 @@ scr_delivering()
 }
 
 if workcount &gt;=100 {complete_work+=1; workcount=0;}
-
+}
 </string>
           </argument>
         </arguments>

@@ -16,9 +16,11 @@ draw_text(x+34,y-25,invoice)
 }
 
 //draw body
-draw_sprite_ext(body_sprite,body,x,y,dir+body_type,1,0,c_white,1);
+draw_sprite_ext(body_sprite,body,x,y,scale+body_type,scale,0,c_white,1);
 //draw head
-draw_sprite_ext(spr_user_head,head,x,y,dir+body_type,1,0,c_white,1);
+draw_sprite_ext(spr_user_head,head,x,y,scale,scale,0,c_white,1);
+//draw_hair
+draw_sprite_ext(hair_sprite,hair,x,y,scale,scale,0,c_white,1);
 
 //draw face
-draw_sprite_ext(face_sprite,face,x,y,dir+body_type,1,0,c_white,1);
+draw_sprite_ext(face_sprite,face,x,y,scale,scale,0,c_white,1);

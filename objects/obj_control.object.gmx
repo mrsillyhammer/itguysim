@@ -265,6 +265,8 @@ var pru=(POWERUSED_PRINTER_SMALL*PRINTERS_SMALL)+(POWERUSED_PRINTER_LARGE*PRINTE
 var seru=POWERUSED_SERVER*SERVERS;
 var wiu=POWERUSED_WIRELESS*WIRELESS;
 
+POWERBILL=get_powerbill();
+
 USEDPOWER=pcu+pru+seru+wiu;
 GENERATORS=instance_number(obj_generator);
 MAXPOWER=GENERATORS*25
@@ -335,13 +337,14 @@ STORAGE_AVAILABLE=SERVERS*STORAGE_PER_SERVER;
           <argument>
             <kind>1</kind>
             <string>///time
+if GO=1 {
 SECOND+=SPEED
 if SECOND &gt;=60 {MINUTE+=1 SECOND=1}
 if MINUTE &gt;=60 {scr_pay_salary() HOUR+=1 MINUTE=1}
 if HOUR &gt;=17 {DAY+=1 scr_it_budget() scr_age_equipment(); scr_power_bill() HOUR=8}
 if DAY &gt;=30 {MONTH+=1 DAY=1}
 if MONTH &gt;=12 {YEAR+=1 MONTH=1}
-
+}
 </string>
           </argument>
         </arguments>
@@ -362,28 +365,7 @@ if MONTH &gt;=12 {YEAR+=1 MONTH=1}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

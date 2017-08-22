@@ -1,6 +1,6 @@
 ///scr_gui
 draw_set_font(fn_gui_16);
-
+/*
 draw_text(0,0,"Equipment")
 
 draw_text(0,25,"Computers: "+string(COMPUTERS))
@@ -24,7 +24,22 @@ draw_text(0,360,"$"+string(BUDGET))
 
 draw_text(0,390,"Company Budget")
 draw_text(0,420,"$"+string(COMPANY_MONEY))
+*/
 
+
+draw_text(10,10,"IT Budget: $"+string(BUDGET)+" (+"+string(COMPANY_MONEY*.1)+" p/H)")
+
+
+draw_text(10,40,"Company Budget: $"+string(COMPANY_MONEY))
+
+draw_text(10,60,"PowerBill: -$"+string(POWERBILL))
 //clock
 
-draw_text(view_wport-100,10,string(string_add_zeros(HOUR,2))+":"+string(string_add_zeros(MINUTE,2))+":"+string(string_add_zeros(SECOND,2)))
+draw_text(view_wport-200,30,"Autopilot:")
+draw_set_color(c_lime);
+if AUTOPILOT==1 {draw_text(view_wport-100,30,"Enabled")}
+draw_set_color(c_red);
+if AUTOPILOT==0 {draw_text(view_wport-100,30,"disabled")}
+draw_set_color(c_white);
+
+draw_text(view_wport-200,10,"Day: "+string(DAY)+"   "+"   "+string(string_add_zeros(HOUR,2))+":"+string(string_add_zeros(MINUTE,2))+":"+string(string_add_zeros(SECOND,2)))
