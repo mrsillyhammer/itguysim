@@ -22,7 +22,11 @@
           <sound>sound\snd_pc_speedup</sound>
           <sound>sound\snd_pc_slowdown</sound>
         </sounds>
+        <sound>sound\snd_account_status_up</sound>
+        <sound>sound\snd_account_status_down</sound>
+        <sound>sound\snd_close_menu</sound>
         <sound>sound\snd_sell</sound>
+        <sound>sound\snd_error</sound>
         <sound>sound\snd_repair</sound>
       </sounds>
     </sounds>

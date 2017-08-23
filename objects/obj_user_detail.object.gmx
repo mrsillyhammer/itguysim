@@ -210,30 +210,41 @@ prints: "+string(pages_printed)
 draw_sprite(spr_close_but,0,view_hport/2+400,view_yport+80)
     if guix &gt;746 and guiy &gt;68 and guix &lt;773 and guiy &lt;94 and mouse_check_button_pressed (mb_left)
 {
-    
+    audio_play_sound(snd_close_menu,5,0);
     instance_destroy();
 
 }
 
 //account status button
-if account_status !=0 {
-draw_sprite(spr_account_lock,account_status,750,100)
+if account_status ==0 {
+draw_sprite(spr_account_lock,0,750,100)
+
+    if guix &gt;757 and guiy &gt;105 and guix &lt;802 and guiy &lt;156 and mouse_check_button_pressed (mb_left)
+{
+    scr_delete_ticket(master.id)
+    master.account_status=1;
+    audio_play_sound(snd_account_status_down,5,0)
+
+}
+}
+if account_status ==1 {
+draw_sprite(spr_account_lock,1,750,100)
 
     if guix &gt;757 and guiy &gt;105 and guix &lt;802 and guiy &lt;156 and mouse_check_button_pressed (mb_left)
 {
     scr_delete_ticket(master.id)
     master.account_status=0;
-
+audio_play_sound(snd_account_status_up,5,0)
 }
 }
-if account_status ==0 {
-draw_sprite(spr_account_lock,account_status,750,100)
+if account_status ==2 {
+draw_sprite(spr_account_lock,2,750,100)
 
     if guix &gt;757 and guiy &gt;105 and guix &lt;802 and guiy &lt;156 and mouse_check_button_pressed (mb_left)
 {
     
     master.account_status=1;
-
+audio_play_sound(snd_account_status_up,5,0)
 }
 }
 

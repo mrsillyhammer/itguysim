@@ -6,3 +6,4 @@ ds_grid_set(PROBLEM_LIST,1,ds_grid_height(PROBLEM_LIST)-1,argument1);
 ds_grid_set(PROBLEM_LIST,2,ds_grid_height(PROBLEM_LIST)-1,1);
 */
 ds_list_add(PROBLEM_LIST,argument0);
+audio_play_sound(snd_error,5,0);

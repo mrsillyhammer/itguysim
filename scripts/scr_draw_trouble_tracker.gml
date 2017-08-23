@@ -43,6 +43,7 @@ for (i=0; i<ds_list_size(PROBLEM_LIST); i++)
 if guix >1202 and guiy >94+110*i and guix <1215 and guiy <112+110*i and mouse_check_button_pressed (mb_left)
 {
 scr_delete_ticket(object)
+audio_play_sound(snd_close_menu,5,0);
 }
     
     
@@ -86,6 +87,7 @@ object.alarm[1]=1;
 if guix >1202 and guiy >94+110*i and guix <1215 and guiy <112+110*i and mouse_check_button_pressed (mb_left)
 {
 scr_delete_ticket(object)
+audio_play_sound(snd_close_menu,5,0);
 }
     
     
@@ -128,6 +130,7 @@ ZOOM=.4
 if guix >1202 and guiy >94+110*i and guix <1215 and guiy <112+110*i and mouse_check_button_pressed (mb_left)
 {
 scr_delete_ticket(object)
+audio_play_sound(snd_close_menu,5,0);
 }
     
     
