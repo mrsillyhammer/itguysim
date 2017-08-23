@@ -43,5 +43,5 @@ if AUTOPILOT==0 {draw_text_gui(view_wport-100,30,"disabled")}
 draw_set_color(c_white);
 
 draw_storage_circular(50,190,30,0,STORAGE_USED,spr_data)
-draw_text(28,180,(STORAGE_USED))
+draw_text(28,180,(floor(STORAGE_USED)))
 draw_text_gui(view_wport-200,10,"Day: "+string(DAY)+"   "+"   "+string(string_add_zeros(HOUR,2))+":"+string(string_add_zeros(MINUTE,2))+":"+string(string_add_zeros(SECOND,2)))
