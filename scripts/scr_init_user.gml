@@ -22,8 +22,8 @@ mood=100;
 
 connected=0; //connected to network
 
-first_name=noone;
-last_name=noone;
+first_name=scr_male_name();
+last_name=scr_male_name();
 title=noone;
 
 sales=0;
@@ -81,3 +81,7 @@ hair=irandom(sprite_get_number(spr_user_hair_female))
 
 //start ai
 alarm[0]=20
+
+//account status
+//account_age=0
+account_status=0 //0 open, 1 locked, 2, password needs reset

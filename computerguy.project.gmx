@@ -29,6 +29,7 @@
   <sprites name="sprites">
     <sprites name="misc">
       <sprite>sprites\spr_misc_grey</sprite>
+      <sprite>sprites\spr_Wall</sprite>
       <sprite>sprites\spr_misc_red</sprite>
       <sprite>sprites\spr_misc_yellow</sprite>
       <sprite>sprites\spr_misc_green</sprite>
@@ -89,6 +90,7 @@
       <scripts name="drawing">
         <script>scripts\scr_draw_user.gml</script>
       </scripts>
+      <script>scripts\totro.gml</script>
       <script>scripts\scr_male_name.gml</script>
       <scripts name="titles">
         <script>scripts\scr_title.gml</script>
@@ -126,9 +128,12 @@
       <script>scripts\draw_text_gui.gml</script>
       <script>scripts\draw_text_dropshadow_ext_transformed.gml</script>
       <script>scripts\scr_message.gml</script>
+      <script>scripts\scr_draw_trouble_tracker.gml</script>
       <script>scripts\scr_draw_outline.gml</script>
       <script>scripts\scr_normalize_sprite.gml</script>
+      <script>scripts\scr_trouble_ticket.gml</script>
       <script>scripts\scr_equipment_install.gml</script>
+      <script>scripts\scr_trouble_tracker.gml</script>
       <script>scripts\scr_gui.gml</script>
       <script>scripts\string_add_zeros.gml</script>
       <script>scripts\scr_init_game_variables.gml</script>

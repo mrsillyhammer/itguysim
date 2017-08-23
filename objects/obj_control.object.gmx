@@ -392,7 +392,9 @@ if MONTH &gt;=12 {YEAR+=1 MONTH=1}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>///trouble tracking
+//scr_trouble_tracker()
+</string>
           </argument>
         </arguments>
       </action>
@@ -601,6 +603,7 @@ audio_play_sound(bg_music_main,0,1);
           <argument>
             <kind>1</kind>
             <string>scr_gui();
+scr_draw_trouble_tracker();
 </string>
           </argument>
         </arguments>

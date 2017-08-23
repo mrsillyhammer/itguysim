@@ -164,4 +164,9 @@ globalvar YEAR;
 YEAR=0;
 
 
+//trouble tracker
+
+globalvar PROBLEM_LIST;
+PROBLEM_LIST=ds_grid_create(2,0);
+
 
