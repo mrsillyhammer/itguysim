@@ -27,7 +27,38 @@
             <kind>1</kind>
             <string>display=1
 scr_printer_init();
+alarm[0]=irandom(1000)
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if status=0 {
+var chn=irandom(100)
+if chn &gt;=99 {
+status=choose(1,2,3,4); 
+}
+}//1 working, 2 jammed, 3 unplugged, 4 broken, 5 out of ink
+
+alarm[0]=random(3000)+1000
 </string>
           </argument>
         </arguments>
@@ -117,6 +148,29 @@ display=0;
           <argument>
             <kind>1</kind>
             <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>status=2
+</string>
           </argument>
         </arguments>
       </action>

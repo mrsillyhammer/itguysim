@@ -8,7 +8,7 @@ working=0;
       if distance_to_object(myprinter) <= 30 {
   
   
-      if complete_work >= 1 && myprinter.paper >=1 && myprinter.has_ink=1 && invoice < invoice_max
+      if complete_work >= 1 && myprinter.paper >=1 && myprinter.has_ink=1 && invoice < invoice_max && myprinter.status=1
        {
        pages_printed+=1
        var c,m,b,py;

@@ -93,6 +93,8 @@ if instance_exists(obj_printer_parent) {
 myprinter=instance_nearest(x,y,obj_printer_parent);
 }
 
+
+
 //update fax
 if instance_exists(obj_fax) {
 myfax=instance_nearest(x,y,obj_fax);

@@ -1,2 +1,2 @@
 ///scr_male_name
-//var name=
+return "FIRST NAME";

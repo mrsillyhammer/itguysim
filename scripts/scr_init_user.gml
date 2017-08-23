@@ -23,7 +23,7 @@ mood=100;
 connected=0; //connected to network
 
 first_name=scr_male_name();
-last_name=scr_male_name();
+last_name="LAST NAME";
 title=noone;
 
 sales=0;
