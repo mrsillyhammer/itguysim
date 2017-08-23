@@ -1,3 +1,4 @@
+/*
 var c,p,f,u,w,s;
 
 
@@ -51,3 +52,4 @@ ds_grid_set(PROBLEM_LIST,1,ds_grid_height(PROBLEM_LIST),status);
    }
  
  }
+ */

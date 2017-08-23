@@ -49,6 +49,7 @@ hair=0
 msex=0
 etd=0;
 aps=0;
+account_status=0;
 </string>
           </argument>
         </arguments>
@@ -92,6 +93,7 @@ hair_sprite=master.hair_sprite
 face=master.face
 body=master.body
 hair=master.hair
+account_status=master.account_status;
 if master.sex=0 {msex="(M)";}
 if master.sex=1 {msex="(F)";}
 etd=salary*8*DAY
@@ -204,9 +206,36 @@ prints: "+string(pages_printed)
 
 )
 
+//close button
+draw_sprite(spr_close_but,0,view_hport/2+400,view_yport+80)
+    if guix &gt;746 and guiy &gt;68 and guix &lt;773 and guiy &lt;94 and mouse_check_button_pressed (mb_left)
+{
+    
+    instance_destroy();
 
+}
 
+//account status button
+if account_status !=0 {
+draw_sprite(spr_account_lock,account_status,750,100)
 
+    if guix &gt;757 and guiy &gt;105 and guix &lt;802 and guiy &lt;156 and mouse_check_button_pressed (mb_left)
+{
+    scr_delete_ticket(master.id)
+    master.account_status=0;
+
+}
+}
+if account_status ==0 {
+draw_sprite(spr_account_lock,account_status,750,100)
+
+    if guix &gt;757 and guiy &gt;105 and guix &lt;802 and guiy &lt;156 and mouse_check_button_pressed (mb_left)
+{
+    
+    master.account_status=1;
+
+}
+}
 
 
 </string>

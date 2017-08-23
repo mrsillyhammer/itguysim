@@ -1,4 +1,6 @@
 ///scr_gui
+//debug stuff
+draw_text(400,0,string(guix)+","+string(guiy));
 draw_set_font(fn_gui_16);
 /*
 draw_text_gui(0,0,"Equipment")

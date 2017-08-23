@@ -33,6 +33,33 @@ scr_printer_init();
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+display=1;
+mydisp=instance_create(x+90,y-21,obj_printer_display);
+mydisp.master=id;
+audio_play_sound(snd_printer_click,1,0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="8">
       <action>
         <libid>1</libid>
@@ -52,7 +79,7 @@ scr_printer_init();
             <kind>1</kind>
             <string>if status=1 {
 status=choose(5,6)
-scr_trouble_ticket(id,status)
+scr_trouble_ticket(id)
 }
 </string>
           </argument>

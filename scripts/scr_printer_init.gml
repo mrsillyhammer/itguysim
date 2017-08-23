@@ -13,3 +13,5 @@ y_ink=100;
 mydisp=noone;
 healthmod=.000001
 quality=1;
+repairing=0;
+repair_count=0;

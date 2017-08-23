@@ -23,6 +23,7 @@
           <sound>sound\snd_pc_slowdown</sound>
         </sounds>
         <sound>sound\snd_sell</sound>
+        <sound>sound\snd_repair</sound>
       </sounds>
     </sounds>
   </sounds>
@@ -73,8 +74,12 @@
     <sprites name="gui">
       <sprite>sprites\spr_data</sprite>
       <sprite>sprites\spr_refill_paper</sprite>
+      <sprite>sprites\spr_repair</sprite>
       <sprite>sprites\spr_pc_up</sprite>
       <sprite>sprites\spr_pc_down</sprite>
+      <sprite>sprites\spr_close_but</sprite>
+      <sprite>sprites\spr_account_lock</sprite>
+      <sprite>sprites\spr_view_user</sprite>
       <sprite>sprites\spr_sell_equipment</sprite>
       <sprite>sprites\spr_close</sprite>
       <sprite>sprites\spr_refill_ink</sprite>
@@ -123,11 +128,16 @@
         <script>scripts\scr_it_budget.gml</script>
         <script>scripts\get_powerbill.gml</script>
       </scripts>
+      <scripts name="gui buttons">
+        <script>scripts\script40.gml</script>
+      </scripts>
+      <script>scripts\problem_maker.gml</script>
       <script>scripts\draw_storage_circular.gml</script>
       <script>scripts\draw_text_outline.gml</script>
       <script>scripts\draw_text_gui.gml</script>
       <script>scripts\draw_text_dropshadow_ext_transformed.gml</script>
       <script>scripts\scr_message.gml</script>
+      <script>scripts\scr_delete_ticket.gml</script>
       <script>scripts\scr_draw_trouble_tracker.gml</script>
       <script>scripts\scr_draw_outline.gml</script>
       <script>scripts\scr_normalize_sprite.gml</script>
@@ -178,12 +188,14 @@
         <object>objects\obj_printer_paper_refill</object>
         <object>objects\obj_sell_printer</object>
         <object>objects\obj_printer_ink_refill</object>
+        <object>objects\obj_printer_repair</object>
         <object>objects\obj_printer_close</object>
         <object>objects\obj_printer_display</object>
       </objects>
       <objects name="pc">
         <object>objects\obj_pc_close</object>
         <object>objects\obj_pc_speed_up</object>
+        <object>objects\obj_pc_repair</object>
         <object>objects\obj_sell_pc</object>
         <object>objects\obj_pc_slow_down</object>
         <object>objects\obj_pc_display</object>

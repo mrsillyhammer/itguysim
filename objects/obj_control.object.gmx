@@ -29,6 +29,34 @@
 storage=0;
 alarm[1]=100
 alarm[0]=1
+show_tickets=1
+alarm[2]=random(2000)+500
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///problem maker 5000
+problem_maker()
+alarm[2]=irandom(2000)+500;
+
 </string>
           </argument>
         </arguments>
@@ -204,6 +232,9 @@ view_wview[0] = 1280 * ZOOM
 view_hview[0] = 720 * ZOOM
 view_xview[0] = x - view_wview / 2
 view_yview[0] = y - view_hview / 2
+
+guix = window_mouse_get_x();  
+guiy = window_mouse_get_y();
 </string>
           </argument>
         </arguments>
@@ -465,6 +496,7 @@ if MONTH &gt;=12 {YEAR+=1 MONTH=1}
             <string>old_bw=0;
 old_bh=0;
 
+
 /*
 //OP_initDevice();
 if(os_type==os_android)
@@ -603,7 +635,9 @@ audio_play_sound(bg_music_main,0,1);
           <argument>
             <kind>1</kind>
             <string>scr_gui();
+if show_tickets=1 {
 scr_draw_trouble_tracker();
+}
 </string>
           </argument>
         </arguments>

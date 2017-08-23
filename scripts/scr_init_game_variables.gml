@@ -16,7 +16,8 @@ mode=1;
 
 texture_set_interpolation(false);
 //gui stuff
-
+globalvar guix;
+globalvar guiy;
 //pause
 globalvar GO;
 GO=1;
@@ -163,10 +164,27 @@ MONTH=1;
 globalvar YEAR;
 YEAR=0;
 
+//repairing
+globalvar REPAIR_SPEED_PRINTER;
+REPAIR_SPEED_PRINTER=.1;
+
+globalvar REPAIR_COST_PRINTER;
+REPAIR_COST_PRINTER=250;
+
+globalvar REPAIR_SPEED_PC;
+REPAIR_SPEED_PC=.1;
+
+globalvar REPAIR_COST_PC;
+REPAIR_COST_PC=250;
 
 //trouble tracker
 
 globalvar PROBLEM_LIST;
-PROBLEM_LIST=ds_grid_create(2,0);
+PROBLEM_LIST=0;
+if ds_exists(PROBLEM_LIST,ds_type_list) {
+ds_list_destroy(PROBLEM_LIST);
+}
+PROBLEM_LIST=ds_list_create();
+ds_list_add(PROBLEM_LIST,"fart");
 
 

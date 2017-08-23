@@ -36,6 +36,8 @@ inkbutton=instance_create(x,y+26,obj_pc_slow_down)
 inkbutton.master=id;
 sellbutton=instance_create(x,y+39,obj_sell_pc)
 sellbutton.master=id;
+repairbutton=instance_create(x,y+52,obj_pc_repair)
+repairbutton.master=id;
 
 </string>
           </argument>
